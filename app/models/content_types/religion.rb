@@ -1,4 +1,4 @@
-class Religion < ActiveRecord::Base
+﻿class Religion < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :user
@@ -15,7 +15,7 @@ class Religion < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'ExtendedContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   # Characters
   relates :notable_figures, with: :religious_figureships

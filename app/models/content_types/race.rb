@@ -1,4 +1,4 @@
-##
+﻿##
 # = race
 # == /'reis/
 # _noun_
@@ -21,7 +21,7 @@ class Race < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'ExtendedContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   # Characters
   relates :famous_figures, with: :famous_figureships

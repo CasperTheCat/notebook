@@ -1,4 +1,4 @@
-##
+﻿##
 # = cree-chur
 # == /'krechurr/
 # _noun_
@@ -23,7 +23,7 @@ class Creature < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'ExtendedContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   # Locations
   relates :habitats,    with: :wildlifeships

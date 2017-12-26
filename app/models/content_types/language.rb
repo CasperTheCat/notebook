@@ -1,4 +1,4 @@
-class Language < ActiveRecord::Base
+﻿class Language < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :user
@@ -15,7 +15,7 @@ class Language < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'ExtendedContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   scope :is_public, -> { eager_load(:universe).where('languages.privacy = ? OR universes.privacy = ?', 'public', 'public') }
 

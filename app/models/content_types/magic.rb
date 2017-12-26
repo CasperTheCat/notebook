@@ -1,4 +1,4 @@
-class Magic < ActiveRecord::Base
+﻿class Magic < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :user
@@ -15,7 +15,7 @@ class Magic < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'ExtendedContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   # Characters
   relates :deities, with: :magic_deityships

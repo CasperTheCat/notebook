@@ -1,4 +1,4 @@
-class Scene < ActiveRecord::Base
+﻿class Scene < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :user
@@ -15,7 +15,7 @@ class Scene < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'CollectiveContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   # Characters
   relates :scene_characters, with: :scene_characterships

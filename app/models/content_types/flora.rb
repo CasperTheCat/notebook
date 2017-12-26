@@ -1,4 +1,4 @@
-class Flora < ActiveRecord::Base
+﻿class Flora < ActiveRecord::Base
   validates :name, presence: true
 
   belongs_to :user
@@ -15,7 +15,7 @@ class Flora < ActiveRecord::Base
   include Serendipitous::Concern
 
   include Authority::Abilities
-  self.authorizer_name = 'ExtendedContentAuthorizer'
+  self.authorizer_name = 'UniverseCoreContentAuthorizer'
 
   relates :related_floras, with: :flora_relationships
   relates :magics, with: :flora_magical_effects
